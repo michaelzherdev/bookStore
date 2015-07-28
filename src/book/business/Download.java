@@ -31,12 +31,12 @@ public class Download implements Serializable{
     @Temporal(TemporalType.DATE)
     private Date downloadDate;
 
-    private String productCode;
+    private String productISBN;
 
     public Download() {
         user = null;
         downloadDate = new Date();
-        productCode = "";
+        productISBN = "";
     }
 
     public Long getDownloadId() {
@@ -63,12 +63,12 @@ public class Download implements Serializable{
         return downloadDate;
     }
 
-    public void setProductCode(String productCode) {
-        this.productCode = productCode;
+    public void setProductISBN(String productISBN) {
+        this.productISBN = productISBN;
     }
 
-	public String getProductCode() {
-		return productCode;
+	public String getProductISBN() {
+		return productISBN;
 	}
     
     

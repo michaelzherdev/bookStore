@@ -2,6 +2,7 @@ package book.business;
 
 import java.io.Serializable;
 import java.text.NumberFormat;
+import java.util.Locale;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,7 +20,7 @@ public class Product implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long productId;
-	private String code;
+	private String ISBN; //code
 	private String description;
 	private double price;
 	
@@ -33,12 +34,12 @@ public class Product implements Serializable{
 		this.productId = productId;
 	}
 
-	public String getCode() {
-		return code;
+	public String getISBN() {
+		return ISBN;
 	}
 
-	public void setCode(String code) {
-		this.code = code;
+	public void setISBN(String ISBN) {
+		this.ISBN = ISBN;
 	}
 
 	public String getDescription() {
@@ -58,12 +59,13 @@ public class Product implements Serializable{
 	}
 	
 	public String getPriceCurrencyFormat(){
-		NumberFormat currency = NumberFormat.getCurrencyInstance();
+		Locale USlocale = new Locale.Builder().setLanguage("en").setRegion("US").build(); 
+		NumberFormat currency = NumberFormat.getCurrencyInstance(USlocale);
 		return currency.format(price);
 	}
 	
 	public String getImageURL(){
-		String imageURL = "/bookStore/images/" + code + "_cover.jpg";
+		String imageURL = "/BookStore/images/" + ISBN + "_cover.jpg";
 		return imageURL;
 	}
 	
@@ -71,13 +73,13 @@ public class Product implements Serializable{
 		return "Book";
 	}
 	
-	public String getArtistName(){
-		String artistName = description.substring(0, description.indexOf(" - "));
-		return artistName;
+	public String getAuthorName(){
+		String authorName = description.substring(0, description.indexOf(" - "));
+		return authorName;
 	}
 	
-	public String getAlbumName(){
-		String albumName = description.substring(description.indexOf(" - ") + 3);
-		return albumName;
+	public String getBookName(){
+		String bookName = description.substring(description.indexOf(" - ") + 3);
+		return bookName;
 	}
 }

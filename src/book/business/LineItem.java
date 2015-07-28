@@ -2,6 +2,7 @@ package book.business;
 
 import java.io.Serializable;
 import java.text.NumberFormat;
+import java.util.Locale;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -59,7 +60,8 @@ public class LineItem implements Serializable{
 	}
 	
 	public String getTotalCurrencyFormat(){
-		NumberFormat currency = NumberFormat.getCurrencyInstance();
+		Locale USlocale = new Locale.Builder().setLanguage("en").setRegion("US").build();
+		NumberFormat currency = NumberFormat.getCurrencyInstance(USlocale);
 		return currency.format(this.getTotal());
 	}
 }

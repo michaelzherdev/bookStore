@@ -5,6 +5,7 @@ import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import static javax.persistence.FetchType.EAGER;
 
@@ -98,9 +99,10 @@ public class Invoice implements Serializable{
 		return invoiceTotal;
 	}
 	
-	public String getInvoiceTotalCarrencyFormat(){
+	public String getInvoiceTotalCurrencyFormat(){
+		Locale USlocale = new Locale.Builder().setLanguage("en").setRegion("US").build();
 		double total = this.getInvoiceTotal();
-		NumberFormat currency = NumberFormat.getCurrencyInstance();
+		NumberFormat currency = NumberFormat.getCurrencyInstance(USlocale);
 		return currency.format(total);
 	}
 }

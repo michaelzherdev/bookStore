@@ -61,7 +61,7 @@ public class ReportDB {
             row.createCell(3).setCellValue(u.getCompanyName());
             row.createCell(4).setCellValue(u.getAddress());
             row.createCell(6).setCellValue(u.getCity());
-            row.createCell(7).setCellValue(u.getSt());
+            row.createCell(7).setCellValue(u.getState());
             row.createCell(8).setCellValue(u.getZip());
             row.createCell(9).setCellValue(u.getCountry());
             row.createCell(10).setCellValue(u.getUserId());
@@ -112,7 +112,7 @@ public class ReportDB {
 		for(Download download : downloads){
 			row = sheet.createRow(i);
 			row.createCell(0).setCellValue(download.getDownloadDate().toString());
-			row.createCell(1).setCellValue(download.getProductCode());
+			row.createCell(1).setCellValue(download.getProductISBN());
 			row.createCell(2).setCellValue(download.getUser().getEmail());
 	        row.createCell(3).setCellValue(download.getUser().getFirstName());
 	        row.createCell(4).setCellValue(download.getUser().getLastName());

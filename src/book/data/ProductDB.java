@@ -10,12 +10,12 @@ import book.business.Product;
 
 public class ProductDB {
 
-	public static Product selectProduct(String code){
+	public static Product selectProduct(String ISBN){
 		EntityManager em = DBUtil.getEMFactory().createEntityManager();
-		String qString = "SELECT p FROM product p " + 
-				"WHERE p.code = :code";
+		String qString = "SELECT p FROM Product p " +
+                "WHERE p.ISBN = :ISBN";
 		TypedQuery<Product> q = em.createQuery(qString, Product.class);
-		q.setParameter("code", code);
+		q.setParameter("ISBN", ISBN);
 		Product result = null;
 		try{
 			result = q.getSingleResult();

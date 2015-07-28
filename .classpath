@@ -15,20 +15,17 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/EclipseLink 2.5.2">
 		<attributes>
-			<attribute name="owner.project.facets" value="jpt.jpa;#system#"/>
+			<attribute name="owner.project.facets" value="#system#;jpt.jpa"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Frameworks/jsf/jstl-1.2.jar"/>
 	<classpathentry kind="lib" path="C:/Frameworks/jsp/javax.el-api.jar"/>
 	<classpathentry kind="lib" path="C:/Frameworks/jsp/jsp-api-2.0.jar"/>
 	<classpathentry kind="lib" path="C:/Frameworks/jsp/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Frameworks/mysql-connector-java-5.1.24-bin.jar"/>
 	<classpathentry kind="lib" path="C:/murach/javax.mail.jar"/>
-	<classpathentry kind="lib" path="C:/murach/jstl-api.jar"/>
-	<classpathentry kind="lib" path="C:/murach/jstl-impl.jar"/>
 	<classpathentry kind="lib" path="C:/murach/poi-3.10-FINAL-20140208.jar"/>
 	<classpathentry kind="lib" path="C:/murach/tomcat-dbcp.jar"/>
-	<classpathentry kind="lib" path="C:/Frameworks/mysql-connector-java-5.1.0-bin.jar"/>
-	<classpathentry kind="lib" path="C:/Frameworks/mysql-connector-java-5.1.24-bin.jar"/>
-	<classpathentry kind="lib" path="C:/Frameworks/org.eclipse.persistence.core_1.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Frameworks/jsf/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mzherdev/Downloads/persistence-api-1.0.jar" sourcepath="C:/Users/mzherdev/.m2/repository/javax/persistence/persistence-api/1.0/persistence-api-1.0-sources.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

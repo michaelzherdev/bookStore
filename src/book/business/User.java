@@ -102,11 +102,11 @@ public class User implements Serializable{
 		this.city = city;
 	}
 
-	public String getSt() {
+	public String getState() {
 		return st;
 	}
 
-	public void setSt(String state) {
+	public void setState(String state) {
 		this.st = state;
 	}
 

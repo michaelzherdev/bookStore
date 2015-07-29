@@ -122,7 +122,7 @@ public class CatalogServlet extends HttpServlet{
 		response.addCookie(emailCookie);
 		
 		Product product = (Product) session.getAttribute("product");
-		String url = "/catalog/" + product.getISBN() + "/read.jsp";
+		String url = "/catalog/" + product.getISBN() + "/download.jsp";
 		return url;
 	}
 }

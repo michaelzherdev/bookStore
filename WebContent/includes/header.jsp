@@ -14,7 +14,7 @@
 <body>
 	<header>
 		<img src="<c:url value='/images/logo.jpg'/>"
-			alt="Book Zone Logo" width="58">
+			alt="Book Zone Logo" width="60">
 		<h1>Book Zone</h1>
 		<h2>Quality Books For Low Prices!</h2>
 	</header>

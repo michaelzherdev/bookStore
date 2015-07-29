@@ -11,17 +11,19 @@
   	
   	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
   
-	<form method="post"
-		action="<c:url value='/catalog/${product.isbn}/read/register'/>">
+	<form action="<c:url value='/catalog/product/${product.ISBN}/read'/>"
+			method="post">
+		<label>Email</label>
+    	<input type="email" name="email" required="required"><br>
 		<label>Username</label>
-		<input type="text" name="j_username"><br>
+		<input type="text" name="j_username" required="required"><br>
 		<label>Password</label>
-		<input type="password" name="j_password"><br>
-		<label>$nbsp;</label>
+		<input type="password" name="j_password" required="required"><br>
+		
 		<input type="submit" value="Login"><br>
 	</form>
 </section>
 	<!-- end of middle column  -->
 
-<jsp:include page="/includes/column_right.jsp" />
+<jsp:include page="/includes/column_right_button.jsp" />
 <jsp:include page="/includes/footer.jsp" />

@@ -29,7 +29,7 @@ h2 { font-size: 125%; }
 a { font-weight: bold; }
 a:link { color: green; }
 a:visited { color: green; }
-a.current { color: #9c0e5a; }
+a.current { color: #ef9c00; }
 a:hover, a:focus { color: blue; }
 
 ul { 
@@ -45,15 +45,15 @@ em { font-weight: bold; }
 /* the styles for the header */
 header { 
     padding-bottom: 2em;
-    border-bottom: 2px solid #9c0e5a;
+    border-bottom: 2px solid #ef9c00;
 }
 header h1 {
-    color: #9c0e5a;
+    color: #ef9c00;
     margin-left: 120px;
     margin-bottom: 0.25em;
 }
 header h2 {
-    color: #9c00ef;
+    color: green;
     font-style: italic;
     margin-left: 120px;
 }
@@ -66,7 +66,7 @@ header img {
     clear: left;
     margin: 0;
     padding: 0;
-    border-bottom: 2px solid #9c0e5a;
+    border-bottom: 2px solid #ef9c00;
     text-align: right;
 }
 #nav_bar ul {
@@ -237,14 +237,14 @@ aside img {
     width: 180px; 
     float: left; 
     height: 400px;
-    border-right: 2px solid #9c0e5a;
+    border-right: 2px solid #ef9c00;
 }
 #sidebarB { 
     width: 180px; 
     float: right; 
     height: 400px;
     padding-left: 20px;
-    border-left: 2px solid #9c0e5a;
+    border-left: 2px solid #ef9c00;
 }
 
 
@@ -252,7 +252,7 @@ aside img {
 footer {
     clear: both;
     margin-top: 1em;
-    border-top: 2px solid #9c0e5a;
+    border-top: 2px solid #ef9c00;
     padding-top: 0.7em;
 }
 footer p {

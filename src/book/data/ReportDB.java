@@ -1,9 +1,15 @@
 package book.data;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
+import javax.persistence.TemporalType;
 import javax.persistence.TypedQuery;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -74,10 +80,25 @@ public class ReportDB {
 	public static Workbook getDownloadedDetail(String startDate, String endDate){
 		// get data from db
 		EntityManager em = DBUtil.getEMFactory().createEntityManager();
+		
 		String qString = "SELECT d FROM Download d " + 
 				"WHERE d.downloadDate >= :startDate AND " + 
 				"d.downloadDate <= :endDate ORDER BY d.downloadDate DESC";
 		TypedQuery<Download> q = em.createQuery(qString, Download.class);
+		
+		DateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+		Date dateStartDate = new Date();
+		Date dateEndDate = new Date();
+		try {
+			dateStartDate = format.parse(startDate);
+			dateEndDate = format.parse(endDate);
+		} catch (ParseException e) {
+			System.out.println(e);
+		}
+		q.setParameter("startDate", dateStartDate, TemporalType.DATE);
+		q.setParameter("endDate", dateEndDate, TemporalType.DATE);
+        System.out.println(startDate + " "+ endDate);
+        
 		List<Download> downloads = null;
 		try{
 			downloads = q.getResultList();

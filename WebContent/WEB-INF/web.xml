@@ -40,6 +40,10 @@
  		<servlet-name>OrderServlet</servlet-name>
  		<servlet-class>book.servlets.OrderServlet</servlet-class>
  	</servlet>
+ 	<servlet>
+ 		<servlet-name>AdminServlet</servlet-name>
+ 		<servlet-class>book.servlets.AdminServlet</servlet-class>
+ 	</servlet>
  	
  	
  	<servlet-mapping>
@@ -53,6 +57,10 @@
  	<servlet-mapping>
  		<servlet-name>OrderServlet</servlet-name>
  		<url-pattern>/order/*</url-pattern>
+ 	</servlet-mapping>
+ 	<servlet-mapping>
+ 		<servlet-name>AdminServlet</servlet-name>
+ 		<url-pattern>/adminServlet/*</url-pattern>
  	</servlet-mapping>
  	
  

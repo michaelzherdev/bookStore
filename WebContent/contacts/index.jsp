@@ -18,7 +18,9 @@
         <h2>Email:</h2>
         <p><a href="mailto:mzherdev@smartru.com">mzherdev@smartru.com</a></p>
         <h2>Post Addess</h2>
-        <p>77777, Walking st, 222, Tula, Russia</p>
+        <p>300000, Tula, Some st, 77</p>
+        <img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?sid=bDja5Pb5b55nfvpUXCQ2xXcAy6ekZ4Ti&width=600&height=450"
+        	width="400" height="300" alt="Our Address on Yandex Map"/>
 </section>
 	
 	<!-- end of middle column  -->

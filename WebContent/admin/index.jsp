@@ -10,7 +10,7 @@
 	
 	<!-- these Form tags don't force a secure connection -->
 	
-		<form action="<c:url value='/adminController/displayInvoices'/>" method="post">
+		<form action="<c:url value='/adminServlet/displayInvoices'/>" method="post">
 		   <input type="submit" value="Process Invoices" class="left_margin">
 		</form>
 		

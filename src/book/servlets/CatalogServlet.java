@@ -32,6 +32,8 @@ public class CatalogServlet extends HttpServlet{
 		String url;
 		if(requestURI.endsWith("/read")){
 			url = read(request, response);
+		} else if(requestURI.endsWith("/read/register")){
+			url = showProduct(request, response);
 		} else {
 			url = showProduct(request, response);
 		}
@@ -46,7 +48,9 @@ public class CatalogServlet extends HttpServlet{
 		String url = "/catalog";
 		if(requestURI.endsWith("/register")){
 			url = registerUser(request, response);
-		} 
+		} else if(requestURI.endsWith("/read/register")){
+			url = showProduct(request, response);
+		}
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
 		dispatcher.forward(request, response);
 	}
@@ -60,24 +64,23 @@ public class CatalogServlet extends HttpServlet{
 			String emailAddress = CookieUtil.getCookieValue(cookies, "emailCookie");
 			// if the email cookie doesn't exist, go to the registration page
 			if(emailAddress == null || emailAddress.equals("")){
-				return "/catalog/register,jsp";
+				return "/catalog/register.jsp";
 			} else {
 				user = UserDB.selectUser(emailAddress);
 				// if a user for that email isn't in the database, go to the registration page
 				if(user == null) {
-					return "/catalog/register,jsp";
+					return "/catalog/register.jsp";
 				}
 				session.setAttribute("user", user);
 			}
 		}
 		
 		Product product = (Product) session.getAttribute("product");
-		
 		Download download = new Download();
 		download.setUser(user);
 		download.setProductISBN(product.getISBN());
 		DownloadDB.insert(download);
-		return "/catalog/" + product.getISBN() + "/read.jsp";
+		return "/catalog/" + product.getISBN() + "/download.jsp";
 	}
 
 	private String showProduct(HttpServletRequest request,

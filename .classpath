@@ -18,14 +18,14 @@
 			<attribute name="owner.project.facets" value="#system#;jpt.jpa"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Frameworks/jsp/javax.el-api.jar"/>
-	<classpathentry kind="lib" path="C:/Frameworks/jsp/jsp-api-2.0.jar"/>
-	<classpathentry kind="lib" path="C:/Frameworks/jsp/servlet-api.jar"/>
-	<classpathentry kind="lib" path="C:/Frameworks/mysql-connector-java-5.1.24-bin.jar"/>
-	<classpathentry kind="lib" path="C:/murach/javax.mail.jar"/>
-	<classpathentry kind="lib" path="C:/murach/poi-3.10-FINAL-20140208.jar"/>
-	<classpathentry kind="lib" path="C:/murach/tomcat-dbcp.jar"/>
-	<classpathentry kind="lib" path="C:/Frameworks/jsf/jstl-1.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/mzherdev/Downloads/persistence-api-1.0.jar" sourcepath="C:/Users/mzherdev/.m2/repository/javax/persistence/persistence-api/1.0/persistence-api-1.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mzherdev/workspace-cg/BookStore/frames/javax.el-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mzherdev/workspace-cg/BookStore/frames/javax.mail.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mzherdev/workspace-cg/BookStore/frames/jsp-api-2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mzherdev/workspace-cg/BookStore/frames/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mzherdev/workspace-cg/BookStore/frames/mysql-connector-java-5.1.24-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mzherdev/workspace-cg/BookStore/frames/persistence-api-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mzherdev/workspace-cg/BookStore/frames/poi-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mzherdev/workspace-cg/BookStore/frames/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mzherdev/workspace-cg/BookStore/frames/tomcat-dbcp.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

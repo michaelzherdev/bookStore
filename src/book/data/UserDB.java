@@ -3,6 +3,7 @@ package book.data;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.NoResultException;
+import javax.persistence.NonUniqueResultException;
 import javax.persistence.TypedQuery;
 
 import book.business.User;
@@ -49,7 +50,11 @@ public class UserDB {
 			result = q.getSingleResult();
 		} catch (NoResultException e){
 			return null;
-		} finally{
+		} catch (NonUniqueResultException e) {
+			System.out.println("User already exists.");
+			return null;
+		} 
+		finally{
 			em.close();
 		}
 		
